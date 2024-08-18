@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pencil Animation</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="container">
+    <h>Musa, Fatima Vianca B.</h>
+    <br><h>BSCS 3A</h>
+    <br><br><h>This pencil will draw a straight line.</h>
+    <div class="btn-cont">
+        <button id="startButton">Start Drawing</button>
+        <button id="stopButton">Stop Drawing</button>
+    </div>
+    <div id="pencil"></div>
+    <div id="line"></div>
+</div>
+<script>
+const startButton = document.getElementById('startButton');
+const stopButton = document.getElementById('stopButton');
+const pencil = document.getElementById('pencil');
+const line = document.getElementById('line');
+
+startButton.addEventListener('click', () => {
+  pencil.style.animationPlayState = 'running';
+});
+
+stopButton.addEventListener('click', () => {
+  pencil.style.animationPlayState = 'paused';
+});
+
+startButton.addEventListener('click', () => {
+  line.style.animationPlayState = 'running';
+});
+
+stopButton.addEventListener('click', () => {
+  line.style.animationPlayState = 'paused';
+});
+</script>
+</body>
+</html>
